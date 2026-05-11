@@ -53,6 +53,54 @@ function itsc_cases_shortcode_styles() {
 			grid-template-columns: repeat(var(--itsc-cases-columns, 3), minmax(0, 1fr));
 			gap: 22px;
 		}
+		.cases-cards-archive {
+			max-width: 1180px;
+			margin: 0 auto;
+			padding: 72px 20px 88px;
+		}
+		.cases-cards-archive-header {
+			max-width: 760px;
+			margin-bottom: 34px;
+		}
+		.cases-cards-archive-title {
+			margin: 0 0 14px;
+			font-size: clamp(34px, 5vw, 58px);
+			line-height: 1.12;
+		}
+		.cases-cards-archive-description {
+			margin: 0;
+			color: var(--ast-global-color-3);
+			font-size: 18px;
+			line-height: 1.65;
+		}
+		.itsc-cases-filters {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 0 0 24px;
+		}
+		.itsc-cases-filter {
+			display: inline-flex;
+			align-items: center;
+			min-height: 32px;
+			padding: 5px 12px;
+			border: 1px solid var(--ast-border-color);
+			background: var(--ast-global-color-5);
+			border-radius: 999px;
+			color: var(--ast-global-color-3);
+			cursor: pointer;
+			font: inherit;
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 1.3;
+			transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+		}
+		.itsc-cases-filter:hover,
+		.itsc-cases-filter.is-active {
+			border-color: var(--ast-global-color-2);
+			background: var(--ast-global-color-4);
+			color: var(--ast-global-color-2);
+		}
 		.itsc-cases-card {
 			display: flex;
 			flex-direction: column;
@@ -63,6 +111,9 @@ function itsc_cases_shortcode_styles() {
 			color: inherit;
 			text-decoration: none;
 			transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+		}
+		.itsc-cases-card.is-hidden {
+			display: none;
 		}
 		.itsc-cases-card:hover,
 		.itsc-cases-card:focus {
@@ -117,11 +168,43 @@ function itsc_cases_shortcode_styles() {
 			}
 		}
 		@media (max-width: 640px) {
+			.cases-cards-archive {
+				padding-top: 44px;
+				padding-bottom: 56px;
+			}
 			.itsc-cases-cards {
 				grid-template-columns: 1fr;
 			}
 		}
 	</style>
+	<script>
+		(function() {
+			document.addEventListener('click', function(event) {
+				var button = event.target.closest('.itsc-cases-filter');
+				if (!button) {
+					return;
+				}
+
+				var wrapper = button.closest('.itsc-cases-shortcode');
+				if (!wrapper) {
+					return;
+				}
+
+				var filter = button.getAttribute('data-case-filter');
+				var buttons = wrapper.querySelectorAll('.itsc-cases-filter');
+				var cards = wrapper.querySelectorAll('.itsc-cases-card');
+
+				buttons.forEach(function(item) {
+					item.classList.toggle('is-active', item === button);
+				});
+
+				cards.forEach(function(card) {
+					var highlights = (card.getAttribute('data-case-highlights') || '').split(' ');
+					card.classList.toggle('is-hidden', filter !== 'all' && highlights.indexOf(filter) === -1);
+				});
+			});
+		})();
+	</script>
 	<?php
 
 	return ob_get_clean();
@@ -133,6 +216,7 @@ function itsc_cases_shortcode_render( $atts ) {
 			'limit'   => '-1',
 			'columns' => '3',
 			'ids'     => '',
+			'filters' => 'yes',
 			'orderby' => 'date',
 			'order'   => 'DESC',
 		),
@@ -145,6 +229,7 @@ function itsc_cases_shortcode_render( $atts ) {
 	$order   = strtoupper( $atts['order'] ) === 'ASC' ? 'ASC' : 'DESC';
 	$orderby = in_array( $atts['orderby'], array( 'date', 'title', 'menu_order', 'ID' ), true ) ? $atts['orderby'] : 'date';
 	$ids     = array_filter( array_map( 'absint', preg_split( '/[\s,]+/', $atts['ids'] ) ) );
+	$filters = ! in_array( strtolower( $atts['filters'] ), array( '0', 'false', 'no', 'off' ), true );
 
 	$query_args = array(
 		'post_type'           => 'post',
@@ -168,39 +253,77 @@ function itsc_cases_shortcode_render( $atts ) {
 		return '';
 	}
 
+	$cases      = array();
+	$highlights = array();
+
+	while ( $query->have_posts() ) {
+		$query->the_post();
+
+		$post_id           = get_the_ID();
+		$case_highlights   = itsc_cases_shortcode_get_repeater_items( 'highlight', $post_id );
+		$short_description = function_exists( 'get_field' ) ? get_field( 'short_description', $post_id ) : '';
+		$stack             = array_slice( itsc_cases_shortcode_get_repeater_items( 'stack', $post_id ), 0, 4 );
+
+		foreach ( $case_highlights as $highlight ) {
+			$highlight_key = sanitize_title( $highlight );
+			if ( $highlight_key ) {
+				$highlights[ $highlight_key ] = $highlight;
+			}
+		}
+
+		$cases[] = array(
+			'id'                => $post_id,
+			'title'             => get_the_title(),
+			'url'               => get_permalink(),
+			'short_description' => $short_description,
+			'highlights'        => $case_highlights,
+			'stack'             => $stack,
+		);
+	}
+	wp_reset_postdata();
+
 	ob_start();
 	echo itsc_cases_shortcode_styles();
 	?>
-	<div class="itsc-cases-cards" style="<?php echo esc_attr( '--itsc-cases-columns:' . $columns ); ?>">
-		<?php
-		while ( $query->have_posts() ) :
-			$query->the_post();
+	<div class="itsc-cases-shortcode">
+		<?php if ( $filters && $highlights ) : ?>
+			<div class="itsc-cases-filters" aria-label="<?php esc_attr_e( 'Filter cases by highlight', 'cases-cards' ); ?>">
+				<button class="itsc-cases-filter is-active" type="button" data-case-filter="all"><?php esc_html_e( 'All', 'cases-cards' ); ?></button>
+				<?php foreach ( $highlights as $highlight_key => $highlight_label ) : ?>
+					<button class="itsc-cases-filter" type="button" data-case-filter="<?php echo esc_attr( $highlight_key ); ?>"><?php echo esc_html( $highlight_label ); ?></button>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
 
-			$post_id           = get_the_ID();
-			$short_description = function_exists( 'get_field' ) ? get_field( 'short_description', $post_id ) : '';
-			$highlight         = itsc_cases_shortcode_get_repeater_items( 'highlight', $post_id );
-			$stack             = array_slice( itsc_cases_shortcode_get_repeater_items( 'stack', $post_id ), 0, 4 );
-			?>
-			<a class="itsc-cases-card" href="<?php the_permalink(); ?>">
-				<?php if ( $highlight ) : ?>
-					<div class="itsc-cases-card-highlight"><?php echo esc_html( implode( ' / ', $highlight ) ); ?></div>
-				<?php endif; ?>
-				<h3 class="itsc-cases-card-title"><?php echo itsc_cases_shortcode_escape_title( get_the_title() ); ?></h3>
-				<?php if ( $short_description ) : ?>
-					<p class="itsc-cases-card-summary"><?php echo esc_html( wp_trim_words( $short_description, 26 ) ); ?></p>
-				<?php endif; ?>
-				<?php if ( $stack ) : ?>
-					<div class="itsc-cases-card-stack">
-						<?php foreach ( $stack as $stack_item ) : ?>
-							<span class="itsc-cases-card-stack-item"><?php echo esc_html( $stack_item ); ?></span>
-						<?php endforeach; ?>
-					</div>
-				<?php endif; ?>
-			</a>
-			<?php
-		endwhile;
-		wp_reset_postdata();
-		?>
+		<div class="itsc-cases-cards" style="<?php echo esc_attr( '--itsc-cases-columns:' . $columns ); ?>">
+			<?php foreach ( $cases as $case ) : ?>
+				<?php
+				$highlight_keys = array();
+				foreach ( $case['highlights'] as $highlight ) {
+					$highlight_key = sanitize_title( $highlight );
+					if ( $highlight_key ) {
+						$highlight_keys[] = $highlight_key;
+					}
+				}
+				?>
+				<a class="itsc-cases-card" href="<?php echo esc_url( $case['url'] ); ?>" data-case-highlights="<?php echo esc_attr( implode( ' ', $highlight_keys ) ); ?>">
+					<?php if ( $case['highlights'] ) : ?>
+						<div class="itsc-cases-card-highlight"><?php echo esc_html( implode( ' / ', $case['highlights'] ) ); ?></div>
+					<?php endif; ?>
+					<h3 class="itsc-cases-card-title"><?php echo itsc_cases_shortcode_escape_title( $case['title'] ); ?></h3>
+					<?php if ( $case['short_description'] ) : ?>
+						<p class="itsc-cases-card-summary"><?php echo esc_html( wp_trim_words( $case['short_description'], 26 ) ); ?></p>
+					<?php endif; ?>
+					<?php if ( $case['stack'] ) : ?>
+						<div class="itsc-cases-card-stack">
+							<?php foreach ( $case['stack'] as $stack_item ) : ?>
+								<span class="itsc-cases-card-stack-item"><?php echo esc_html( $stack_item ); ?></span>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
+				</a>
+			<?php endforeach; ?>
+		</div>
 	</div>
 	<?php
 
@@ -210,3 +333,18 @@ function itsc_cases_shortcode_render( $atts ) {
 add_shortcode( 'itsc_cases', 'itsc_cases_shortcode_render' );
 add_shortcode( 'cases_cards', 'itsc_cases_shortcode_render' );
 add_shortcode( 'case_cards', 'itsc_cases_shortcode_render' );
+
+add_filter(
+	'template_include',
+	function ( $template ) {
+		if ( is_category( 'cases' ) ) {
+			$archive_template = __DIR__ . '/templates/cases-cards-archive-template.php';
+
+			if ( file_exists( $archive_template ) ) {
+				return $archive_template;
+			}
+		}
+
+		return $template;
+	}
+);
