@@ -54,6 +54,12 @@ function itsc_case_render_list( $items, $class = '' ) {
 	return $html;
 }
 
+function itsc_case_escape_title( $title ) {
+	$escaped = esc_html( $title );
+
+	return preg_replace( '/(?<=[[:alnum:]])-(?=[[:alnum:]])/', '&#8209;', $escaped );
+}
+
 function itsc_case_render_template( $post_id ) {
 	$title                 = get_the_title( $post_id );
 	$short_description     = itsc_case_get_field( 'short_description', $post_id );
@@ -74,7 +80,7 @@ function itsc_case_render_template( $post_id ) {
 			<?php if ( $highlight ) : ?>
 				<div class="itsc-case-eyebrow"><?php echo esc_html( implode( ' / ', $highlight ) ); ?></div>
 			<?php endif; ?>
-			<h2><?php echo esc_html( $title ); ?></h2>
+			<h2><?php echo itsc_case_escape_title( $title ); ?></h2>
 			<?php if ( $short_description ) : ?>
 				<p class="itsc-case-summary"><?php echo esc_html( $short_description ); ?></p>
 			<?php endif; ?>
@@ -197,6 +203,9 @@ add_action(
 				margin: 0 0 20px;
 				font-size: clamp(32px, 5vw, 52px);
 				line-height: 1.15;
+				overflow-wrap: normal;
+				word-break: normal;
+				hyphens: none;
 			}
 			.itsc-case-summary {
 				max-width: 780px;
