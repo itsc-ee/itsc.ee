@@ -53,8 +53,11 @@ function itsc_cases_shortcode_styles() {
 			grid-template-columns: repeat(var(--itsc-cases-columns, 3), minmax(0, 1fr));
 			gap: 22px;
 		}
+		#primary.cases-cards-archive,
 		.cases-cards-archive {
-			max-width: 1180px;
+			box-sizing: border-box;
+			width: 100%;
+			max-width: var(--ast-normal-container-width, 1200px);
 			margin: 0 auto;
 			padding: 72px 20px 88px;
 		}
@@ -170,7 +173,9 @@ function itsc_cases_shortcode_styles() {
 		@media (max-width: 640px) {
 			.cases-cards-archive {
 				padding-top: 44px;
+				padding-right: 20px;
 				padding-bottom: 56px;
+				padding-left: 20px;
 			}
 			.itsc-cases-cards {
 				grid-template-columns: 1fr;
@@ -216,6 +221,7 @@ function itsc_cases_shortcode_render( $atts ) {
 			'limit'   => '-1',
 			'columns' => '3',
 			'ids'     => '',
+			'category' => 'cases',
 			'filters' => 'yes',
 			'orderby' => 'date',
 			'order'   => 'DESC',
@@ -230,12 +236,21 @@ function itsc_cases_shortcode_render( $atts ) {
 	$orderby = in_array( $atts['orderby'], array( 'date', 'title', 'menu_order', 'ID' ), true ) ? $atts['orderby'] : 'date';
 	$ids     = array_filter( array_map( 'absint', preg_split( '/[\s,]+/', $atts['ids'] ) ) );
 	$filters = ! in_array( strtolower( $atts['filters'] ), array( '0', 'false', 'no', 'off' ), true );
+	$category = sanitize_title( $atts['category'] );
+
+	if ( 'current' === $category && is_category() ) {
+		$category = get_queried_object()->slug;
+	}
+
+	if ( '' === $category ) {
+		$category = 'cases';
+	}
 
 	$query_args = array(
 		'post_type'           => 'post',
 		'post_status'         => 'publish',
 		'posts_per_page'      => $limit,
-		'category_name'       => 'cases',
+		'category_name'       => $category,
 		'orderby'             => $orderby,
 		'order'               => $order,
 		'ignore_sticky_posts' => true,
@@ -333,11 +348,49 @@ function itsc_cases_shortcode_render( $atts ) {
 add_shortcode( 'itsc_cases', 'itsc_cases_shortcode_render' );
 add_shortcode( 'cases_cards', 'itsc_cases_shortcode_render' );
 add_shortcode( 'case_cards', 'itsc_cases_shortcode_render' );
+add_shortcode( 'category_cards', 'itsc_cases_shortcode_render' );
+
+function cases_cards_is_cases_archive() {
+	return is_category( 'cases' );
+}
+
+add_filter(
+	'astra_page_layout',
+	function ( $layout ) {
+		if ( cases_cards_is_cases_archive() ) {
+			return 'no-sidebar';
+		}
+
+		return $layout;
+	}
+);
+
+add_filter(
+	'astra_site_content_layout',
+	function ( $layout ) {
+		if ( cases_cards_is_cases_archive() ) {
+			return 'page-builder';
+		}
+
+		return $layout;
+	}
+);
+
+add_filter(
+	'astra_get_content_layout',
+	function ( $layout ) {
+		if ( cases_cards_is_cases_archive() ) {
+			return 'page-builder';
+		}
+
+		return $layout;
+	}
+);
 
 add_filter(
 	'template_include',
 	function ( $template ) {
-		if ( is_category( 'cases' ) ) {
+		if ( cases_cards_is_cases_archive() ) {
 			$archive_template = __DIR__ . '/templates/cases-cards-archive-template.php';
 
 			if ( file_exists( $archive_template ) ) {
