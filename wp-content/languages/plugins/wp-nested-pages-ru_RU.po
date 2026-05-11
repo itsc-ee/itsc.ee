@@ -1,0 +1,1230 @@
+# Translation of Plugins - Nested Pages - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Nested Pages - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-14 04:13:57+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Nested Pages - Stable (latest release)\n"
+
+#: app/Views/settings/settings-posttypes.php:366
+msgid "Limit bulk edit capabilities to specific roles. Note: Features within bulk edit will respect role-specific rules. This will remove bulk edit completely from deselected roles."
+msgstr "Ограничьте возможности массового редактирования для определённых ролей. Примечание: Возможности массового редактирования будут учитывать правила, специфичные для ролей. Это полностью отключит функции массового редактирования для невыбранных ролей."
+
+#: app/Views/settings/settings-posttypes.php:365
+msgid "Bulk Edit Roles"
+msgstr "Массовое редактирование ролей"
+
+#: app/Views/settings/settings-posttypes.php:81
+msgid "Maximum Nesting Level for %s"
+msgstr "Максимальный уровень вложенности для %s"
+
+#: app/Views/settings/settings-posttypes.php:79
+msgid "Enable Maximum Nesting Level %s"
+msgstr "Включить максимальный уровень вложенности %s"
+
+#: app/Views/settings/settings-posttypes.php:76
+msgid "By default, there is no maximum level of nesting for hierarchical posts. Value includes the primary level."
+msgstr "По умолчанию нет максимального уровня вложенности для иерархических записей. Значение включает основной уровень."
+
+#: app/Views/settings/settings-posttypes.php:75
+msgid "Maximum Nesting Depth"
+msgstr "Максимальная глубина вложенности"
+
+#: app/Views/forms/clone-form.php:63
+msgid "Clone Children"
+msgstr "Клонировать дочерние элементы"
+
+#: app/Views/settings/settings-general.php:71
+msgid "Default new pages to hide in nav menu."
+msgstr "Скрывать новые страницы в меню навигации по умолчанию."
+
+#: app/Views/partials/row.php:290
+msgid "Trash Children Icon"
+msgstr "Значок дочерней корзины"
+
+#: app/Views/partials/row.php:197
+msgid "Clone Icon"
+msgstr "Значок клонирования"
+
+#: app/Views/partials/row.php:187
+msgid "Arrow Down Icon"
+msgstr "Значок стрелки вниз"
+
+#: app/Views/partials/row.php:179
+msgid "Arrow Up Icon"
+msgstr "Значок стрелки вверх"
+
+#: app/Views/partials/row.php:167
+msgid "Insert After Icon"
+msgstr "Вставка после значка"
+
+#: app/Views/partials/row.php:159
+msgid "Insert Before Icon"
+msgstr "Вставить перед значком"
+
+#: app/Views/partials/row.php:147
+msgid "Child Page Icon"
+msgstr "Значок дочерней страницы"
+
+#: app/Views/partials/row.php:123
+msgid "Comments Icon"
+msgstr "Значок комментария"
+
+#: app/Views/partials/row.php:112
+msgid "Globe Icon"
+msgstr "Значок глобуса"
+
+#: app/Views/partials/row.php:103
+msgid "More Icon"
+msgstr "Другие значки"
+
+#: app/Views/partials/row.php:45 app/Views/partials/row.php:63
+#: app/Views/partials/row.php:67 app/Views/partials/row.php:81
+msgid "Lock Icon"
+msgstr "Значок замка"
+
+#: app/Views/partials/row-link.php:85 app/Views/partials/row.php:280
+#: app/Views/partials/row.php:285 app/Views/partials/row.php:297
+msgid "Trash Icon"
+msgstr "Значок корзины"
+
+#: app/Views/partials/row-link.php:50 app/Views/partials/row.php:52
+msgid "Hidden Icon"
+msgstr "Скрытый значок"
+
+#: app/Views/partials/row-link.php:39 app/Views/partials/row.php:139
+msgid "Link Icon"
+msgstr "Значок ссылки"
+
+#: app/Views/partials/row-link.php:33 app/Views/partials/row.php:25
+msgid "Sorting Handle"
+msgstr "Сортировочная ручка"
+
+#: app/Views/partials/row-link.php:30 app/Views/partials/row.php:20
+msgid "Arrow"
+msgstr "Стрелка"
+
+#: app/Views/forms/quickedit-post.php:261
+msgid "Example: #"
+msgstr "Пример: #"
+
+#: app/Views/forms/quickedit-post.php:260
+msgid "Custom URL"
+msgstr "Произвольный URL"
+
+#: app/Form/Listeners/ToggleStatusDisplay.php:35
+msgid "Status preference updated."
+msgstr "Обновление статусных предпочтений."
+
+#: app/Form/Listeners/BaseHandler.php:100
+msgid "Invalid Nonce"
+msgstr "Неверный Nonce"
+
+#: app/Entities/Confirmation/TrashConfirmation.php:27
+msgid "<strong>%s</strong> moved to the trash."
+msgstr "<strong>%s</strong> перемещено в корзину."
+
+#: app/Entities/Post/PostDataFactory.php:105 app/Views/forms/link-form.php:38
+msgid "%s (Archive)"
+msgstr "%s (Архив)"
+
+#: app/Views/partials/row.php:269
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: app/Views/settings/settings-general.php:166
+msgid "- or Donate through Paypal -"
+msgstr "- или пожертвуйте через PayPal -"
+
+#: app/Views/settings/settings-general.php:165
+msgid "Sponsor on Github"
+msgstr "Спонсор на Github"
+
+#: app/Views/settings/settings-general.php:164
+msgid "You can help support the continued development and upkeep of this plugin by sponsoring on Github. Whether you are an individual using this on a side project, a business, or an agency using this plugin across multiple sites… every bit helps!"
+msgstr "Вы можете поддержать дальнейшее развитие и поддержку этого плагина, став спонсором на Github. Независимо от того, являетесь ли вы частным лицом, использующим его в своем проекте, бизнесом или агентством, использующим этот плагин на нескольких сайтах... каждый взнос помогает!"
+
+#: app/Views/settings/settings-general.php:163
+msgid "Sponsor this Plugin"
+msgstr "Стать спонсором этого плагина"
+
+#: app/Views/settings/settings-general.php:162
+msgid "Show Some Love!"
+msgstr "Покажите немного любви!"
+
+#: app/Views/settings/settings-general.php:52
+msgid "Include private items in the menu."
+msgstr "Включить личные пункты в меню."
+
+#: app/Views/settings/settings-general.php:120
+msgid "Admins may always view the sort view."
+msgstr "Администраторы всегда могут видеть вид сортировки."
+
+#: app/Views/settings/settings-general.php:104
+msgid "Sort view access is also filterable through the nestedpages_sort_view_$type filter."
+msgstr "Доступ к виду сортировки также можно фильтровать через фильтр nestedpages_sort_view_$type."
+
+#: app/Views/settings/settings-general.php:103
+msgid "Allow Sort View"
+msgstr "Разрешить вид сортировки"
+
+#: app/Views/settings/settings-general.php:86
+msgid "Page sorting capability is also controlled through the nestedpages_sorting_$type capability"
+msgstr "Способность сортировки страницы также контролируется через способность nestedpages_sorting_$type"
+
+#: app/Views/forms/quickedit-post.php:243
+msgid "<strong>Current Menu</strong>: %s"
+msgstr "<strong>Текущее меню</strong>: %s"
+
+#: app/Views/partials/row.php:76
+msgid "(Sticky)"
+msgstr "(Sticky)"
+
+#: app/Views/partials/row.php:291
+msgid "Trash %s & Children"
+msgstr "Удалить %s и детей"
+
+#: app/Views/partials/row.php:286
+msgid "Trash %s"
+msgstr "Корзина %s"
+
+#: app/Form/Listeners/TrashWithChildren.php:53
+msgid "Current page could not be determined"
+msgstr "Текущая страница не может быть определена"
+
+#: app/Views/settings/settings-posttypes.php:185
+msgid "Add custom status support for this post type."
+msgstr "Добавить поддержку пользовательского статуса для этого типа записей."
+
+#: app/Views/settings/settings-posttypes.php:184
+msgid "Enable Custom Statuses"
+msgstr "Включить пользовательские статусы"
+
+#: app/Views/listing.php:45
+msgid "Sync %s Order"
+msgstr "Синхронизировать порядок %s"
+
+#: app/Views/partials/row.php:148
+msgid "Add Child %s"
+msgstr "Добавить дочерной %s"
+
+#: app/Views/partials/row.php:124
+msgid "%d Comments"
+msgstr "%d комментариев"
+
+#: app/Views/partials/row.php:113
+msgid "Translations (%s)"
+msgstr "Переводы (%s)"
+
+#: app/Views/partials/bulk-edit.php:72
+msgid "Parent %s"
+msgstr "Родитель %s"
+
+#: app/Views/partials/tool-list.php:38
+msgid "Empty (%s)"
+msgstr "Пусто (%s)"
+
+#: app/Views/settings/settings-posttypes.php:102
+msgid "Currently assigned to: %s"
+msgstr "В настоящее время назначено: %s"
+
+#: app/Views/settings/settings-posttypes.php:34
+msgid "Replace Default %s Menu"
+msgstr "Заменить стандартное меню %s"
+
+#: app/Views/settings/settings-posttypes.php:19
+msgid "%s <em>(Hierarchical)</em>"
+msgstr "%s <em>(Иерархический)</em>"
+
+#: app/Views/settings/settings-general.php:32
+msgid "Use the classic (non-indented) hierarchy display."
+msgstr "Используйте классический (без отступов) вид иерархии."
+
+#: app/Entities/Confirmation/TrashRestoredConfirmation.php:12
+msgid "%d item restored from trash."
+msgid_plural "%d items restored from trash."
+msgstr[0] "%d элемент восстановлен из корзины."
+msgstr[1] "%d элемента восстановлено из корзины."
+msgstr[2] "%d элементов восстановлено из корзины."
+
+#: app/Entities/Confirmation/TrashConfirmation.php:26
+msgid "%d %s moved to the trash."
+msgstr "%d %s перемещено в корзину."
+
+#: app/Entities/Confirmation/TrashConfirmation.php:17
+msgid "%d Link Removed."
+msgid_plural "%d Links Removed."
+msgstr[0] "%d ссылка удалена."
+msgstr[1] "%d ссылки удалены."
+msgstr[2] "%d ссылок удалено."
+
+#: app/Views/settings/settings-admincustom.php:24
+msgid "Reset Admin Menu Settings"
+msgstr "Сбросить настройки меню администратора"
+
+#: app/Entities/AdminCustomization/AdminMenuItems.php:332
+msgid "Profile"
+msgstr "Профиль"
+
+#: app/Views/settings/partials/nav-menu-settings.php:65
+msgid "Reference"
+msgstr "Ссылка"
+
+#: app/Views/settings/partials/nav-menu-settings.php:65
+msgid "Icon CSS Class"
+msgstr "Класс CSS для значка"
+
+#: app/Views/settings/partials/nav-menu-settings.php:47
+msgid "Details"
+msgstr "Детали"
+
+#: app/Views/settings/partials/nav-menu-settings.php:42
+msgid "Separator (WooCommerce)"
+msgstr "Разделитель (WooCommerce)"
+
+#: app/Config/AdminMenuSettings.php:60
+#: app/Views/settings/partials/nav-menu-settings.php:42
+#: app/Views/settings/partials/nav-menu-settings/header.php:22
+msgid "Separator"
+msgstr "Разделитель"
+
+#: app/Views/settings/partials/nav-menu-settings/header.php:19
+msgid "New"
+msgstr "Новый"
+
+#: app/Views/settings/settings.php:14
+msgid "Admin Customization"
+msgstr "Настройки администратора"
+
+#: app/Views/settings/settings-admincustom.php:22
+msgid "Some plugins may add menu items on activation. These new menu items will not display until the Nested Pages Admin Menu has been configured with these items."
+msgstr "Некоторые плагины могут добавлять элементы меню при активации. Эти новые элементы меню не будут отображаться, пока меню администратора Nested Pages не будет настроено с этими элементами."
+
+#: app/Views/settings/settings-admincustom.php:22
+msgid "Important: Plugin Menu Items "
+msgstr "Важно: элементы меню плагина "
+
+#: app/Views/settings/settings-admincustom.php:21
+msgid "Reorder, hide and rename admin menu items by user role. These changes do not effect actual permissions, only menu appearance."
+msgstr "Упорядочивание, скрытие и переименование пунктов меню администратора в зависимости от роли пользователя. Эти изменения не влияют на реальные права доступа, а только на внешний вид меню."
+
+#: app/Views/settings/settings-admincustom.php:21
+msgid "Menu Items"
+msgstr "Пункты меню"
+
+#: app/Views/settings/settings-admincustom.php:13
+msgid "Admin Menu"
+msgstr "Меню администратора"
+
+#: app/Views/settings/settings-admincustom.php:4
+msgid "Select Items to Customize"
+msgstr "Выберите элементы для настройки"
+
+#: app/Form/Validation/Validation.php:227
+msgid "%s is required."
+msgstr "%s требуется."
+
+#: app/Entities/AdminMenu/AdminSubmenu.php:89
+#: app/Views/partials/tool-list.php:46
+msgid "Default %s"
+msgstr "По умолчанию %s"
+
+#: app/Views/settings/settings-general.php:149
+msgid "User preferences have been successfully reset."
+msgstr "Пользовательские настройки были успешно сброшены."
+
+#: app/Views/settings/settings-general.php:140
+msgid "Toggle states are saved for each user. This action will clear these preferences for all users. If PHP errors appear within the nested view after an update, this may help clear them."
+msgstr "Состояния переключения сохраняются для каждого пользователя. Это действие очистит данные настройки для всех пользователей. Если ошибки PHP появляются во вложенном представлении после обновления, это может помочь избавиться от их."
+
+#: app/Views/settings/settings-general.php:139
+#: app/Views/settings/settings-general.php:145
+msgid "Reset User Preferences"
+msgstr "Сброс пользовательских настроек"
+
+#: app/Form/Listeners/QuickEdit.php:26
+msgid "You do not have sufficient privileges to edit this post."
+msgstr "У вас недостаточно прав для редактирования этой записи."
+
+#: app/Entities/Post/PrivatePostParent.php:30
+msgid "(no parent)"
+msgstr "(без родителя)"
+
+#: app/Activation/Dependencies.php:136
+msgid "Are you sure you would like to empty the trash? This action is not reversible."
+msgstr "Уверены, что хотите очистить корзину? Это действие необратимо."
+
+#: app/Views/settings/settings-posttypes.php:333
+msgid "Initial Order:"
+msgstr "Первоначальный порядок:"
+
+#: app/Views/settings/settings-posttypes.php:317
+msgid "Default (Menu Order)"
+msgstr "По умолчанию (порядок меню)"
+
+#: app/Views/settings/settings-posttypes.php:310
+msgid "Initial Order By:"
+msgstr "Первоначальная сортировка:"
+
+#: app/Views/partials/row.php:188
+msgid "Push to Bottom"
+msgstr "Нажмите вниз"
+
+#: app/Views/partials/row.php:180
+msgid "Push to Top"
+msgstr "Нажмите вверх"
+
+#: app/Views/partials/row.php:168
+msgid "Insert %s After"
+msgstr "Вставить %s после"
+
+#: app/Views/partials/row.php:160
+msgid "Insert %s Before"
+msgstr "Вставить %s перед"
+
+#: app/Views/partials/list-header.php:18 app/Views/partials/tool-list.php:151
+msgid "Apply"
+msgstr "Применить"
+
+#: app/Views/partials/bulk-edit.php:75
+msgid "— No Change —"
+msgstr "- Без изменений -"
+
+#: app/Form/Validation/Validation.php:187
+msgid "A valid parent page was not provided to insert after."
+msgstr "Действительная родительская страница не была предоставлена для вставки после."
+
+#: app/Form/Validation/Validation.php:181
+msgid "A valid parent page was not provided to insert before."
+msgstr "Действительная родительская страница не была предоставлена для вставки перед."
+
+#: app/Activation/Dependencies.php:152
+msgid "Insert After"
+msgstr "Вставить после"
+
+#: app/Activation/Dependencies.php:151
+msgid "Insert Before"
+msgstr "Вставить до"
+
+#: app/Views/settings/settings-general.php:132
+msgid "Settings have been successfully reset."
+msgstr "Настройки успешно сброшены."
+
+#: app/Views/settings/settings-general.php:130
+msgid "Reset Nested Pages Settings"
+msgstr "Сбросить настройки Nested Pages"
+
+#: app/Views/settings/settings-general.php:127
+msgid "Warning: Resetting plugin settings will remove all menu settings, post type customizations, role customizations and any other Nested Pages settings. These will be replaced with the default settings. This action cannot be undone."
+msgstr "Предупреждение: Сброс настроек плагина удалит все настройки меню, типов записей, ролей и любые другие настройки вложенных страниц. Они будут заменены настройками по умолчанию. Это действие не может быть отменено."
+
+#: app/Views/settings/settings-general.php:126
+msgid "Reset Plugin Settings"
+msgstr "Сбросить настройки плагина"
+
+#: app/Views/settings/settings-posttypes.php:296
+msgid "Add and remove sort options."
+msgstr "Добавить и удалить опции сортировки."
+
+#: app/Views/settings/settings-posttypes.php:295
+msgid "Sort Options"
+msgstr "Настройки сортировки"
+
+#: app/Views/settings/settings-posttypes.php:7
+msgid "Enable Post Types:"
+msgstr "Включить типы записей:"
+
+#: app/Views/partials/wpml-translations.php:13
+msgid "Close"
+msgstr "Закрыть"
+
+#: app/Views/partials/wpml-translations.php:4
+msgid "Translations for "
+msgstr "Переводы для "
+
+#: app/Views/forms/quickedit-post.php:179
+msgid "Make Sticky"
+msgstr "Сделать закрепленным"
+
+#: app/Form/Listeners/WpmlTranslations.php:35
+msgid "There are currently no translations for the selected post."
+msgstr "В данный момент нет переводов для выбранной записи."
+
+#: app/Form/Listeners/WpmlTranslations.php:28
+msgid "WPML is not currently installed."
+msgstr "WPML в настоящее время не установлен."
+
+#: app/Entities/PluginIntegration/WPML.php:225
+msgid "All Languages"
+msgstr "Все языки"
+
+#: app/Entities/PluginIntegration/WPML.php:151
+msgid "Sync WPML Menus"
+msgstr "Синхронизировать меню WPML"
+
+#: app/Activation/Dependencies.php:149
+msgid "Add Translation"
+msgstr "Добавить перевод"
+
+#: app/Views/settings/settings-posttypes.php:124
+msgid "There are currently no pages available."
+msgstr "В данный момент нет доступных страниц."
+
+#: app/Views/settings/settings-posttypes.php:111
+msgid "No pages were found."
+msgstr "Страницы не найдены."
+
+#: app/Views/settings/settings-posttypes.php:110
+msgid "Search Pages"
+msgstr "Поиск страниц"
+
+#: app/Views/settings/settings-posttypes.php:95
+msgid "Assign Page"
+msgstr "Назначить страницу"
+
+#: app/Views/settings/settings-posttypes.php:92
+msgid "Adds contextual links and post counts to the page row for the assigned post type."
+msgstr "Добавляет контекстные ссылки и количество записей к строке страницы для назначенного типа записей."
+
+#: app/Views/settings/settings-posttypes.php:91
+msgid "Assign Page for Listing"
+msgstr "Назначить страницу для списка"
+
+#: app/Views/settings/settings-posttypes.php:53
+msgid "Remove drag and drop sorting from this post type."
+msgstr "Убрать сортировку методом перетаскивания для этого типа записи."
+
+#: app/Views/settings/settings-posttypes.php:52
+#: app/Views/settings/settings-posttypes.php:56
+msgid "Disable Sorting"
+msgstr "Отключить сортировку"
+
+#: app/Activation/Dependencies.php:146
+#: app/Views/settings/partials/nav-menu-settings.php:44
+#: app/Views/settings/settings-posttypes.php:102
+msgid "Remove"
+msgstr "Удалить"
+
+#: app/Activation/Dependencies.php:145
+msgid "Currently assigned to:"
+msgstr "В настоящее время назначено:"
+
+#: app/Views/listing.php:87 app/Views/listing.php:90
+msgid "Dismiss this notice."
+msgstr "Игнорировать это уведомление."
+
+#. Description of the plugin
+msgid "Provides an intuitive drag and drop interface for managing pages in the Wordpress admin, while enhancing quick edit. Includes an auto-generated menu to match the nested interface, support for all post types and more."
+msgstr "Предоставляет интуитивно понятный интерфейс для управления страницами в админке WordPress с возможностью быстрого редактирования. Включает автоматически генерируемое меню, соответствующее вложенному интерфейсу, поддержку всех типов записей и многое другое."
+
+#: app/Views/settings/settings-posttypes.php:279
+msgid "No ACF Fields configured for this post type"
+msgstr "Для этого типа записи не настроены поля ACF."
+
+#: app/Views/settings/settings-posttypes.php:264
+msgid "Advanced Custom Fields"
+msgstr "Дополнительные настраиваемые поля"
+
+#: app/Views/settings/settings-posttypes.php:258
+msgid "Check to Include in Quick Edit."
+msgstr "Установите флажок, чтобы включить в быстрое редактирование."
+
+#: app/Views/settings/settings-posttypes.php:252
+msgid "Set which custom fields display in the quick edit form."
+msgstr "Укажите, какие пользовательские поля отображать в форме быстрого редактирования."
+
+#: app/Views/settings/settings-posttypes.php:251
+#: app/Views/settings/settings-posttypes.php:255
+msgid "Configure Custom Fields"
+msgstr "Настроить пользовательские поля"
+
+#: app/Views/settings/settings-posttypes.php:209
+msgid "Check to remove from Quick Edit."
+msgstr "Установите флажок, чтобы убрать из быстрого редактирования."
+
+#: app/Views/settings/settings-posttypes.php:203
+msgid "Remove standard fields from the quick edit form."
+msgstr "Убрать стандартные поля из формы быстрого редактирования."
+
+#: app/Views/settings/settings-posttypes.php:202
+#: app/Views/settings/settings-posttypes.php:206
+msgid "Configure Standard Fields"
+msgstr "Настройка стандартных полей"
+
+#: app/Views/settings/settings-posttypes.php:163
+msgid "Large"
+msgstr "Большой"
+
+#: app/Views/settings/settings-posttypes.php:162
+msgid "Medium"
+msgstr "Средний"
+
+#: app/Views/settings/settings-posttypes.php:161
+msgid "Small"
+msgstr "Маленький"
+
+#: app/Views/settings/settings-posttypes.php:159
+msgid "Thumbnail Display Size"
+msgstr "Размер отображаемой миниатюры"
+
+#: app/Views/settings/settings-posttypes.php:148
+msgid "Thumbnail Source"
+msgstr "Источник миниатюры"
+
+#: app/Views/settings/settings-posttypes.php:145
+msgid "Display Thumbnails for %s"
+msgstr "Показывать миниатюры для %s"
+
+#: app/Views/settings/settings-posttypes.php:142
+msgid "Note: Thumbnail width is displayed at a maximum of 80px in the nested pages view. The image is scaled proportionally."
+msgstr "Примечание: Ширина миниатюры отображается максимум до 80 пикселей в виде вложенных страниц. Изображение масштабируется пропорционально."
+
+#: app/Views/settings/settings-posttypes.php:141
+msgid "Display the thumbnail in the list sort view."
+msgstr "Показывать миниатюру в виде сортировки списка."
+
+#: app/Views/settings/settings-posttypes.php:140
+msgid "Display Thumbnails"
+msgstr "Отображать миниатюры"
+
+#: app/Views/settings/settings-posttypes.php:68
+msgid "Disable Nesting for %s"
+msgstr "Отключить вложенность для %s"
+
+#: app/Views/settings/settings-posttypes.php:65
+msgid "To disable nesting on hierarchical post types, select this option."
+msgstr "Чтобы отключить вложенность в иерархических типах записей, выберите эту опцию."
+
+#: app/Views/settings/settings-posttypes.php:42
+msgid "If the default menu is replaced, a link to the default view will be added. Select this to remove the link"
+msgstr "Если стандартное меню заменено, будет добавлена ссылка на вид по умолчанию. Выберите это, чтобы удалить ссылку."
+
+#: app/Views/settings/settings-posttypes.php:41
+msgid "Remove Default Link"
+msgstr "Удалить ссылку по умолчанию"
+
+#: app/Views/settings/settings-posttypes.php:31
+msgid "Replace the default top-level item with the nested view link."
+msgstr "Заменить стандартный элемент верхнего уровня на ссылку вложенного вида."
+
+#: app/Views/settings/settings-general.php:65
+msgid "Manually sync page order."
+msgstr "Вручную синхронизировать порядок страниц."
+
+#: app/Views/settings/settings-general.php:59
+msgid "Manually sync menu."
+msgstr "Вручную синхронизировать меню."
+
+#: app/Views/partials/list-header.php:20
+msgid "Nested Items Selected"
+msgstr "Выбраны вложенные элементы"
+
+#: app/Views/partials/list-header.php:14
+msgid "Move to Trash"
+msgstr "Поместить в корзину"
+
+#: app/Views/partials/bulk-edit.php:110 app/Views/partials/bulk-edit.php:120
+msgid "Show"
+msgstr "Показать"
+
+#: app/Views/partials/bulk-edit.php:109 app/Views/partials/bulk-edit.php:119
+#: app/Views/settings/partials/nav-menu-settings/header.php:27
+msgid "Hide"
+msgstr "Скрыть"
+
+#: app/Views/partials/bulk-edit.php:106
+msgid "Display in Nested View"
+msgstr "Показывать в виде вложенности"
+
+#: app/Views/partials/bulk-edit.php:100
+msgid "Do not allow"
+msgstr "Запретить"
+
+#: app/Views/partials/bulk-edit.php:99
+msgid "Allow"
+msgstr "Разрешить"
+
+#: app/Views/partials/bulk-edit.php:96
+msgid "Comments"
+msgstr "Комментарии"
+
+#: app/Views/partials/bulk-edit.php:28 app/Views/partials/bulk-edit.php:49
+#: app/Views/partials/bulk-edit.php:63 app/Views/partials/bulk-edit.php:98
+#: app/Views/partials/bulk-edit.php:108 app/Views/partials/bulk-edit.php:118
+msgid "No Change"
+msgstr "Без изменений"
+
+#: app/Views/partials/bulk-edit.php:16
+msgid "There are links selected. Bulk edit will not apply to links."
+msgstr "Выбраны ссылки. Массовое редактирование не будет применено к ссылкам."
+
+#: app/Views/partials/bulk-edit.php:13
+msgid "Bulk Edit"
+msgstr "Массовое редактирование"
+
+#: app/Views/settings/settings-posttypes.php:330
+msgid "Order"
+msgstr "Упорядочение"
+
+#: app/Config/SettingsRepository.php:116
+msgid "Password/Private"
+msgstr "Пароль/Частный"
+
+#: app/Config/SettingsRepository.php:115
+msgid "Post Status"
+msgstr "Статус записи"
+
+#: app/Config/SettingsRepository.php:113
+msgid "Post Date"
+msgstr "Дата записи"
+
+#: app/Config/SettingsRepository.php:111
+msgid "Post Title"
+msgstr "Заголовок записи"
+
+#: app/Activation/Dependencies.php:142
+msgid "Trash Posts and Delete Links"
+msgstr "Удаление записей и ссылок"
+
+#: app/Activation/Dependencies.php:140
+msgid "Are you sure you would like to delete this item? This action is not reversible."
+msgstr "Вы уверены, что хотите удалить этот элемент? Это действие нельзя отменить."
+
+#: app/Activation/Dependencies.php:139
+msgid "Your selection includes link items, which cannot be recovered after deleting. Would you like to continue? (Other items are moved to the trash)"
+msgstr "Ваш выбор включает элементы-ссылки, которые нельзя восстановить после удаления. Хотели бы вы продолжить? (Другие элементы перемещаются в корзину)"
+
+#: app/Activation/Dependencies.php:138 app/Views/partials/list-header.php:12
+msgid "Bulk Actions"
+msgstr "Массовое редактирование"
+
+#. Author URI of the plugin
+msgid "https://github.com/kylephillips"
+msgstr "https://github.com/kylephillips"
+
+#. Author of the plugin
+msgid "Kyle Phillips"
+msgstr "Кайл Филлипс"
+
+#. Plugin URI of the plugin
+msgid "http://nestedpages.com"
+msgstr "http://nestedpages.com"
+
+#: app/Views/settings/settings.php:10
+msgid "Post Types"
+msgstr "Типы записей"
+
+#: app/Views/settings/settings.php:6
+msgid "General"
+msgstr "Общие"
+
+#: app/Views/settings/settings-posttypes.php:391
+msgid "<strong>Important:</strong> Changing page structures on live sites may effect SEO and existing inbound links. Limit URL structure changes on live sites by disabling nesting. Sorting within the current nesting structure will still be available. If nesting changes are made to a live site, it may help to add a 301 redirect from the old location to the new one."
+msgstr "<strong>Важно!</strong> Изменение структуры страниц на действующих сайтах может повлиять на SEO и существующие входящие ссылки. Ограничьте изменения структуры URL-адресов на действующих сайтах, отключив вложенность. Сортировка внутри текущей структуры вложенности по-прежнему будет доступна. Если на действующем сайте внесены изменения вложенности, может помочь добавление перенаправления 301 со старого местоположения на новое."
+
+#: app/Views/settings/settings-posttypes.php:388
+msgid "If default menu is not replaced, an additional submenu item will be added for \"Nested/Sort View\""
+msgstr "Если стандартное меню не заменено, будет добавлен дополнительный подпункт подменю для \"Вложенного/Вида сортировки\""
+
+#: app/Views/settings/settings-posttypes.php:64
+msgid "Disable Nesting"
+msgstr "Отключить вложенность"
+
+#: app/Views/settings/settings-posttypes.php:45
+msgid "Hide Default %s Link"
+msgstr "Скрыть стандартную ссылку %s"
+
+#: app/Views/settings/settings-posttypes.php:30
+msgid "Replace Default Menu"
+msgstr "Заменить меню по умолчанию"
+
+#: app/Views/settings/settings-general.php:97
+msgid "Admins always have sorting ability."
+msgstr "Администраторы всегда имеют возможность сортировки."
+
+#: app/Views/settings/settings-general.php:85
+msgid "Allow Page Sorting"
+msgstr "Разрешить сортировку страниц"
+
+#: app/Views/settings/settings-general.php:77
+msgid "Disable menu sync completely"
+msgstr "Полностью отключить синхронизацию меню"
+
+#: app/Views/settings/settings-general.php:46
+msgid "Hide Menu Sync Checkbox (%s)"
+msgstr "Скрыть флажок синхронизации меню (%s)"
+
+#: app/Views/settings/settings-general.php:39
+msgid "Menu Sync"
+msgstr "Синхронизация меню"
+
+#: app/Views/settings/settings-general.php:28
+msgid "Enable Date Picker in Quick Edit"
+msgstr "Включить выбор даты в быстром редактировании"
+
+#: app/Views/settings/settings-general.php:23
+msgid "Display Options"
+msgstr "Настройки отображения"
+
+#: app/Views/settings/settings-general.php:14
+msgid "Nested Pages Version"
+msgstr "Версия Nested Pages"
+
+#: app/Views/settings/settings-general.php:5
+msgid "Currently Disabled"
+msgstr "В настоящее время выключено"
+
+#: app/Views/settings/settings-general.php:5
+msgid "Currently Enabled"
+msgstr "В настоящее время включено"
+
+#: app/Views/partials/tool-list.php:165
+msgid "All "
+msgstr "Все "
+
+#: app/Views/partials/tool-list.php:112
+#: app/Views/settings/settings-posttypes.php:338
+msgid "Descending"
+msgstr "По убыванию"
+
+#: app/Views/partials/tool-list.php:111
+#: app/Views/settings/settings-posttypes.php:337
+msgid "Ascending"
+msgstr "По возрастанию"
+
+#: app/Views/partials/tool-list.php:90
+#: app/Views/settings/settings-posttypes.php:307
+msgid "Order By"
+msgstr "Упорядочить по"
+
+#: app/Views/partials/tool-list.php:86
+msgid "Menu Order"
+msgstr "Порядок меню"
+
+#: app/Views/partials/tool-list.php:65
+msgid "All Authors"
+msgstr "Все авторы"
+
+#: app/Views/partials/tool-list.php:37
+msgid "Trash"
+msgstr "Корзина"
+
+#: app/Views/partials/tool-list.php:14
+msgid "All"
+msgstr "Все"
+
+#: app/Activation/Dependencies.php:150 app/Views/forms/quickedit-post.php:243
+#: app/Views/partials/list-header.php:16 app/Views/partials/row.php:71
+msgid "Edit"
+msgstr "Изменить"
+
+#: app/Views/partials/row.php:64
+msgid "%s currently editing"
+msgstr "%s в настоящее время редактирует"
+
+#: app/Entities/Listing/Listing.php:242
+msgid "Posts Page"
+msgstr "Страница записей"
+
+#: app/Entities/Listing/Listing.php:241
+msgid "Front Page"
+msgstr "Главная страница"
+
+#: app/Views/listing.php:63 app/Views/listing.php:68
+msgid "Sync Menu"
+msgstr "Меню синхронизации"
+
+#: app/Config/SettingsRepository.php:133 app/Views/forms/quickedit-post.php:23
+msgid "Taxonomies"
+msgstr "Таксономии"
+
+#: app/Config/SettingsRepository.php:122 app/Views/forms/quickedit-post.php:26
+msgid "Menu Options"
+msgstr "Настройки меню"
+
+#: app/Config/SettingsRepository.php:117 app/Views/forms/quickedit-post.php:162
+msgid "Allow Comments"
+msgstr "Разрешить комментарии"
+
+#: app/Activation/Dependencies.php:154 app/Views/forms/quickedit-post.php:152
+#: app/Views/partials/bulk-edit.php:53
+msgid "Private"
+msgstr "Личное"
+
+#: app/Views/forms/quickedit-post.php:149
+msgid "&ndash;OR&ndash;"
+msgstr "&ndash;ИЛИ&ndash;"
+
+#: app/Views/forms/quickedit-post.php:146
+msgid "Password"
+msgstr "Пароль"
+
+#: app/Views/forms/quickedit-post.php:63
+msgid "pm"
+msgstr "после полудня"
+
+#: app/Views/forms/quickedit-post.php:62
+msgid "am"
+msgstr "до полудня"
+
+#: app/Views/forms/quickedit-post.php:58
+msgid "@"
+msgstr "@"
+
+#: app/Views/forms/quickedit-post.php:55 app/Views/forms/quickedit-post.php:72
+#: app/Views/partials/tool-list.php:87
+#: app/Views/settings/settings-posttypes.php:314
+msgid "Date"
+msgstr "Дата"
+
+#: app/Config/SettingsRepository.php:112 app/Views/forms/quickedit-post.php:47
+msgid "Slug"
+msgstr "Ярлык"
+
+#: app/Views/forms/quickedit-link.php:87 app/Views/forms/quickedit-post.php:291
+#: app/Views/partials/bulk-edit.php:159
+msgid "Update"
+msgstr "Обновить"
+
+#: app/Config/SettingsRepository.php:125 app/Views/forms/quickedit-link.php:60
+#: app/Views/forms/quickedit-post.php:171
+msgid "Hide in Nested Pages"
+msgstr "Скрыть в Nested Pages"
+
+#: app/Views/forms/new-child.php:84 app/Views/forms/quickedit-link.php:54
+#: app/Views/forms/quickedit-post.php:268 app/Views/partials/bulk-edit.php:116
+msgid "Hide in Nav Menu"
+msgstr "Скрыть в меню навигации"
+
+#: app/Views/forms/quickedit-link.php:48 app/Views/forms/quickedit-post.php:256
+msgid "CSS Classes"
+msgstr "Классы CSS"
+
+#: app/Entities/PostType/PostTypeRepository.php:490
+#: app/Views/forms/quickedit-link.php:31
+msgid "Scheduled"
+msgstr "Запланировано"
+
+#: app/Views/forms/quickedit-link.php:8
+msgid "Link"
+msgstr "Ссылка"
+
+#: app/Views/forms/new-child.php:109
+msgid "Add & Edit"
+msgstr "Добавить и изменить"
+
+#: app/Views/forms/new-child.php:74 app/Views/forms/quickedit-post.php:138
+#: app/Views/partials/bulk-edit.php:64
+msgid "Default Template"
+msgstr "Шаблон по умолчанию"
+
+#: app/Config/SettingsRepository.php:121 app/Views/forms/new-child.php:72
+#: app/Views/forms/quickedit-post.php:136 app/Views/partials/bulk-edit.php:61
+msgid "Template"
+msgstr "Шаблон"
+
+#: app/Views/forms/new-child.php:28
+msgid "+"
+msgstr "+"
+
+#: app/Views/forms/link-form.php:99 app/Views/forms/quickedit-link.php:66
+#: app/Views/forms/quickedit-post.php:274
+msgid "Open link in a new window/tab"
+msgstr "Открывать в новом окне/вкладке"
+
+#: app/Views/forms/link-form.php:93
+msgid "CSS Classes (optional)"
+msgstr "Классы CSS (необязательно)"
+
+#: app/Views/forms/link-form.php:89 app/Views/forms/quickedit-link.php:44
+#: app/Views/forms/quickedit-post.php:252
+msgid "Title Attribute"
+msgstr "Атрибут title"
+
+#: app/Views/forms/link-form.php:85 app/Views/forms/quickedit-link.php:17
+#: app/Views/forms/quickedit-post.php:248
+msgid "Navigation Label"
+msgstr "Этикетка навигации"
+
+#: app/Views/forms/link-form.php:81 app/Views/forms/quickedit-link.php:22
+msgid "URL"
+msgstr "URL"
+
+#: app/Views/forms/link-form.php:76
+msgid "Original"
+msgstr "Оригинал"
+
+#: app/Views/forms/link-form.php:71
+msgid "Select an item"
+msgstr "Выбрать элемент"
+
+#: app/Views/forms/link-form.php:35 app/Views/forms/link-form.php:57
+msgid "No Results"
+msgstr "Нет результатов"
+
+#: app/Views/forms/link-form.php:28 app/Views/forms/link-form.php:57
+msgid "Search"
+msgstr "Поиск"
+
+#: app/Views/forms/link-form.php:19
+msgid "Custom Link"
+msgstr "Произвольная ссылка"
+
+#: app/Views/forms/empty-trash-modal.php:11
+msgid "Empty Trash"
+msgstr "Очистить корзину"
+
+#: app/Activation/Dependencies.php:141
+#: app/Views/forms/delete-confirmation-modal.php:11
+msgid "Delete"
+msgstr "Удалить"
+
+#: app/Views/forms/clone-form.php:72
+#: app/Views/forms/delete-confirmation-modal.php:10
+#: app/Views/forms/empty-trash-modal.php:10 app/Views/forms/link-form.php:116
+#: app/Views/forms/new-child.php:103 app/Views/forms/quickedit-link.php:84
+#: app/Views/forms/quickedit-post.php:288 app/Views/partials/bulk-edit.php:156
+msgid "Cancel"
+msgstr "Отмена"
+
+#: app/Config/SettingsRepository.php:114 app/Views/forms/clone-form.php:51
+#: app/Views/forms/new-child.php:62 app/Views/forms/quickedit-post.php:95
+#: app/Views/partials/bulk-edit.php:38
+#: app/Views/settings/settings-posttypes.php:302
+msgid "Author"
+msgstr "Автор"
+
+#: app/Entities/PostType/PostTypeRepository.php:494
+#: app/Views/forms/clone-form.php:33 app/Views/forms/new-child.php:40
+#: app/Views/forms/quickedit-link.php:34 app/Views/partials/bulk-edit.php:55
+#: app/Views/partials/tool-list.php:22
+msgid "Draft"
+msgstr "Черновик"
+
+#: app/Entities/PostType/PostTypeRepository.php:493
+#: app/Views/forms/clone-form.php:32 app/Views/forms/quickedit-link.php:33
+#: app/Views/partials/bulk-edit.php:54
+msgid "Pending Review"
+msgstr "На утверждении"
+
+#: app/Entities/PostType/PostTypeRepository.php:489
+#: app/Views/forms/clone-form.php:30 app/Views/forms/new-child.php:38
+#: app/Views/forms/quickedit-link.php:30 app/Views/partials/bulk-edit.php:51
+#: app/Views/partials/tool-list.php:18
+msgid "Published"
+msgstr "Опубликовано"
+
+#: app/Views/forms/clone-form.php:27 app/Views/forms/new-child.php:35
+#: app/Views/forms/quickedit-link.php:27 app/Views/forms/quickedit-post.php:109
+#: app/Views/partials/bulk-edit.php:47
+msgid "Status"
+msgstr "Статус"
+
+#: app/Views/forms/clone-form.php:15
+msgid "Number of Copies"
+msgstr "Количество копий"
+
+#: app/Views/forms/clone-form.php:10 app/Views/forms/clone-form.php:75
+#: app/Views/partials/row.php:198
+msgid "Clone"
+msgstr "Клонировать"
+
+#: app/Form/Validation/Validation.php:202
+msgid "Page titles cannot be blank."
+msgstr "Заголовки страниц не могут быть пустыми."
+
+#: app/Form/Validation/Validation.php:194
+msgid "Please provide at least one page title."
+msgstr "Пожалуйста, укажите хотя бы один заголовок страницы."
+
+#: app/Form/Validation/Validation.php:174
+msgid "A valid parent page was not provided."
+msgstr "Действительная родительская страница не была предоставлена."
+
+#: app/Form/Validation/Validation.php:160
+msgid "Please provide a "
+msgstr "Пожалуйста, укажите "
+
+#: app/Form/Listeners/NewMenuItem.php:28 app/Form/Validation/Validation.php:150
+msgid "Please provide a valid URL."
+msgstr "Пожалуйста, укажите допустимый URL."
+
+#: app/Form/Validation/Validation.php:147
+msgid "Please provide a menu title."
+msgstr "Пожалуйста, укажите заголовок меню."
+
+#: app/Form/Validation/Validation.php:136
+msgid "Please provide a valid date."
+msgstr "Пожалуйста, укажите допустимую дату."
+
+#: app/Form/Listeners/SyncMenu.php:24
+msgid "Menu sync disabled."
+msgstr "Синхронизация меню выключена."
+
+#: app/Form/Listeners/SyncMenu.php:34
+msgid "Menu sync enabled."
+msgstr "Синхронизация меню включена."
+
+#: app/Form/Listeners/Sort.php:33
+msgid "There was an error updating the page order."
+msgstr "Произошла ошибка при обновлении порядка страниц."
+
+#: app/Form/Listeners/Sort.php:31
+msgid "Page order successfully updated."
+msgstr "Порядок страниц успешно обновлен."
+
+#: app/Form/Listeners/QuickEdit.php:35
+msgid "Post successfully updated."
+msgstr "Запись успешно обновлена."
+
+#: app/Form/Listeners/NewMenuItem.php:47
+#: app/Form/Listeners/QuickEditLink.php:28
+msgid "Link successfully updated."
+msgstr "Ссылка успешно обновлена."
+
+#: app/Form/Listeners/NewMenuItem.php:27
+msgid "Custom Links must have a label."
+msgstr "Произвольные ссылки должны иметь этикетку."
+
+#: app/Form/Listeners/EmptyTrash.php:17
+msgid "Trash successfully emptied."
+msgstr "Корзина успешно опустошена."
+
+#: app/Form/Listeners/ClonePost.php:36
+#: app/Form/Listeners/TrashWithChildren.php:50
+#: app/Form/Listeners/WpmlTranslations.php:47
+msgid "Post Not Found"
+msgstr "Запись не найдена"
+
+#: app/Form/Listeners/BaseHandler.php:134
+msgid "There was an error updating the page."
+msgstr "При обновлении страницы произошла ошибка."
+
+#: app/Entities/PostType/RegisterPostTypes.php:30
+msgid "Redirect"
+msgstr "Перенаправление"
+
+#: app/Entities/PostType/RegisterPostTypes.php:29
+msgid "Redirects"
+msgstr "Перенаправления"
+
+#: app/Entities/PostType/PostTypeRepository.php:429
+msgid "Sort View"
+msgstr "Сортировка по виду"
+
+#: app/Entities/PostType/PostTypeRepository.php:429
+msgid "Nested View"
+msgstr "Вложенный вид"
+
+#: app/Entities/Confirmation/TrashConfirmation.php:31
+msgid "Undo"
+msgstr "Отменить"
+
+#: app/Entities/Confirmation/LinkDeletedConfirmation.php:11
+msgid "Link successfully deleted."
+msgstr "Ссылка успешно удалена."
+
+#. Plugin Name of the plugin
+#: app/Config/Settings.php:83
+msgid "Nested Pages"
+msgstr "Nested Pages"
+
+#: app/Config/Settings.php:82 app/Views/settings/settings.php:2
+msgid "Nested Pages Settings"
+msgstr "Nested Pages Настройки"
+
+#: app/Bootstrap.php:70 app/Views/settings/settings-admincustom.php:14
+#: app/Views/settings/settings-posttypes.php:23
+msgid "Settings"
+msgstr "Настройки"
+
+#: app/Activation/Dependencies.php:137 app/Views/partials/row-link.php:54
+#: app/Views/partials/row.php:56
+msgid "Hidden"
+msgstr "Скрытый"
+
+#: app/Views/forms/empty-trash-modal.php:9
+msgid "Are you sure you would like to empty the trash? This action is not reversable."
+msgstr "Вы уверены, что хотите очистить корзину? Это действие необратимо."
+
+#: app/Activation/Dependencies.php:135 app/Views/listing.php:23
+#: app/Views/listing.php:24
+msgid "Add Multiple"
+msgstr "Добавить несколько"
+
+#: app/Activation/Dependencies.php:134
+msgid "Add Pages"
+msgstr "Добавить страницы"
+
+#: app/Activation/Dependencies.php:133
+msgid "Add Page"
+msgstr "Добавить страницу"
+
+#: app/Activation/Dependencies.php:132 app/Views/forms/link-form.php:120
+#: app/Views/forms/new-child.php:106
+msgid "Add"
+msgstr "Добавить"
+
+#: app/Activation/Dependencies.php:131
+msgid "Add Child Pages"
+msgstr "Добавить дочерние страницы"
+
+#: app/Activation/Dependencies.php:130
+msgid "Add Child Page"
+msgstr "Добавить дочернюю страницу"
+
+#: app/Activation/Dependencies.php:129 app/Views/forms/new-child.php:7
+msgid "Add Child"
+msgstr "Добавить дочерной"
+
+#: app/Activation/Dependencies.php:128 app/Views/partials/row.php:261
+msgid "View"
+msgstr "Просмотр"
+
+#: app/Activation/Dependencies.php:127
+msgid "Page Title"
+msgstr "Заголовок страницы"
+
+#: app/Activation/Dependencies.php:126 app/Views/forms/quickedit-post.php:18
+#: app/Views/partials/row-link.php:79 app/Views/partials/row.php:245
+msgid "Quick Edit"
+msgstr "Быстрое редактирование"
+
+#: app/Activation/Dependencies.php:125
+#: app/Entities/Post/PostUpdateRepository.php:123
+#: app/Views/forms/new-child.php:19 app/Views/forms/new-child.php:21
+#: app/Views/forms/quickedit-post.php:40 app/Views/partials/tool-list.php:88
+#: app/Views/settings/settings-posttypes.php:315
+msgid "Title"
+msgstr "Заголовок"
+
+#: app/Activation/Dependencies.php:124 app/Views/partials/row.php:140
+msgid "Add Child Link"
+msgstr "Добавить дочернюю ссылку"
+
+#: app/Activation/Dependencies.php:123 app/Views/listing.php:29
+#: app/Views/listing.php:30
+msgid "Add Link"
+msgstr "Добавить ссылку"
+
+#: app/Activation/Dependencies.php:122 app/Views/partials/tool-list.php:29
+msgid "Hide Hidden"
+msgstr "Скрыть скрытые"
+
+#: app/Activation/Dependencies.php:121 app/Views/partials/tool-list.php:27
+msgid "Show Hidden"
+msgstr "Показать скрытые"
+
+#: app/Activation/Dependencies.php:120
+msgid "Collapse All"
+msgstr "Свернуть всё"
+
+#: app/Activation/Dependencies.php:119 app/Views/listing.php:38
+#: app/Views/partials/list-header.php:20
+msgid "Expand All"
+msgstr "Развернуть все"
