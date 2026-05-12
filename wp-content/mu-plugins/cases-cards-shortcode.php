@@ -153,6 +153,20 @@ function itsc_cases_shortcode_styles() {
 			gap: 7px;
 			margin-top: auto;
 		}
+		.itsc-cases-card-expertise {
+			margin-top: auto;
+		}
+		.itsc-cases-card-stack + .itsc-cases-card-expertise {
+			margin-top: 16px;
+		}
+		.itsc-cases-card-expertise-title {
+			display: block;
+			margin-bottom: 8px;
+			color: var(--ast-global-color-2);
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
 		.itsc-cases-card-stack-item {
 			display: inline-flex;
 			align-items: center;
@@ -278,6 +292,7 @@ function itsc_cases_shortcode_render( $atts ) {
 		$case_highlights   = itsc_cases_shortcode_get_repeater_items( 'highlight', $post_id );
 		$short_description = function_exists( 'get_field' ) ? get_field( 'short_description', $post_id ) : '';
 		$stack             = array_slice( itsc_cases_shortcode_get_repeater_items( 'stack', $post_id ), 0, 4 );
+		$expertise         = array_slice( itsc_cases_shortcode_get_repeater_items( 'expertise', $post_id ), 0, 5 );
 
 		foreach ( $case_highlights as $highlight ) {
 			$highlight_key = sanitize_title( $highlight );
@@ -293,6 +308,7 @@ function itsc_cases_shortcode_render( $atts ) {
 			'short_description' => $short_description,
 			'highlights'        => $case_highlights,
 			'stack'             => $stack,
+			'expertise'         => $expertise,
 		);
 	}
 	wp_reset_postdata();
@@ -334,6 +350,16 @@ function itsc_cases_shortcode_render( $atts ) {
 							<?php foreach ( $case['stack'] as $stack_item ) : ?>
 								<span class="itsc-cases-card-stack-item"><?php echo esc_html( $stack_item ); ?></span>
 							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
+					<?php if ( $case['expertise'] ) : ?>
+						<div class="itsc-cases-card-expertise">
+							<span class="itsc-cases-card-expertise-title"><?php esc_html_e( 'Expertise', 'cases-cards' ); ?></span>
+							<div class="itsc-cases-card-stack">
+								<?php foreach ( $case['expertise'] as $expertise_item ) : ?>
+									<span class="itsc-cases-card-stack-item"><?php echo esc_html( $expertise_item ); ?></span>
+								<?php endforeach; ?>
+							</div>
 						</div>
 					<?php endif; ?>
 				</a>
