@@ -291,7 +291,89 @@ add_action(
 			}
 		}
 
+		class acf_field_itsc_custom_repeater_group extends acf_field_itsc_custom_repeater {
+			public function initialize() {
+				parent::initialize();
+
+				$this->name        = 'custom_repeater_group';
+				$this->label       = __( 'Custom Repeater Group', 'acf' );
+				$this->description = __( 'Repeat title and description groups.', 'acf' );
+				$this->defaults    = array(
+					'layout'       => 'block',
+					'min'          => 0,
+					'max'          => 0,
+					'button_label' => __( 'Add Group', 'acf' ),
+				);
+			}
+
+			public function load_field( $field ) {
+				$field['sub_fields'] = $this->get_group_sub_fields( $field );
+
+				return $field;
+			}
+
+			public function render_field_settings( $field ) {
+				acf_render_field_setting( $field, array( 'label' => __( 'Minimum Rows', 'acf' ), 'type' => 'number', 'name' => 'min', 'min' => 0 ) );
+				acf_render_field_setting( $field, array( 'label' => __( 'Maximum Rows', 'acf' ), 'type' => 'number', 'name' => 'max', 'min' => 0 ) );
+				acf_render_field_setting( $field, array( 'label' => __( 'Button Label', 'acf' ), 'type' => 'text', 'name' => 'button_label' ) );
+			}
+
+			public function duplicate_field( $field ) {
+				unset( $field['sub_fields'] );
+
+				return acf_update_field( $field );
+			}
+
+			public function prepare_field_for_export( $field ) {
+				unset( $field['sub_fields'] );
+
+				return $field;
+			}
+
+			public function prepare_field_for_import( $field ) {
+				unset( $field['sub_fields'] );
+
+				return $field;
+			}
+
+			private function get_group_sub_fields( $field ) {
+				$key = isset( $field['key'] ) ? $field['key'] : 'field_custom_repeater_group';
+
+				return array(
+					array(
+						'key'           => $key . '_title',
+						'label'         => __( 'Title', 'acf' ),
+						'name'          => 'title',
+						'_name'         => 'title',
+						'type'          => 'text',
+						'instructions'  => '',
+						'required'      => 0,
+						'default_value' => '',
+						'placeholder'   => '',
+						'prepend'       => '',
+						'append'        => '',
+						'maxlength'     => '',
+					),
+					array(
+						'key'           => $key . '_description',
+						'label'         => __( 'Description', 'acf' ),
+						'name'          => 'description',
+						'_name'         => 'description',
+						'type'          => 'textarea',
+						'instructions'  => '',
+						'required'      => 0,
+						'default_value' => '',
+						'placeholder'   => '',
+						'maxlength'     => '',
+						'rows'          => 4,
+						'new_lines'     => '',
+					),
+				);
+			}
+		}
+
 		acf_register_field_type( 'acf_field_itsc_custom_repeater' );
+		acf_register_field_type( 'acf_field_itsc_custom_repeater_group' );
 	}
 );
 
