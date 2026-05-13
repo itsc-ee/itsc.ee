@@ -1,7 +1,6 @@
 wp-config.php
 wp-config-sample.php
 wp-config-docker.php
-wp-content/uploads/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/backup*
