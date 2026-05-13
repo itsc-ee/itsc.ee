@@ -216,7 +216,7 @@ add_filter(
 			return $content;
 		}
 
-		return services_acf_render_template( get_the_ID() );
+		return services_acf_render_template( get_the_ID() ) . $content;
 	},
 	30
 );

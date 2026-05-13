@@ -140,7 +140,7 @@ add_filter(
 			return $content;
 		}
 
-		return itsc_case_render_template( get_the_ID() );
+		return itsc_case_render_template( get_the_ID() ) . $content;
 	},
 	30
 );
