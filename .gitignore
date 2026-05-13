@@ -7,7 +7,6 @@ wp-content/upgrade/
 wp-content/backup*
 wp-content/backups
 wp-content/ai1wm-backups/
-wp-content/plugins/updraftplus/
 wp-content/updraft/
 index.html_
 .htaccess
