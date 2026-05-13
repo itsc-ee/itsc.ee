@@ -1,5 +1,15 @@
 *** Astra Changelog ***
 
+2026-05-12 - version 4.13.2
+* New: Introduced `rem` unit support for line-height and letter-spacing in the Typography customizer controls for better accessibility — `rem` values scale with the user's browser font size preference, unlike fixed `px` values.
+* New: Added WP-CLI commands for managing the Abilities API — list, enable, disable, and inspect individual abilities directly from the command line.
+* Improvement: Off-Canvas close icon no longer shrinks when a scrollbar appears, or popup padding is applied.
+* Fix: Sticky header menu toggle desync — main header burger icon showing close (X) state after sticky header releases.
+* Fix: Multi-selector control clipping long post type labels and rendering HTML entities as literal text.
+* Fix: Customizer white screen on WordPress 6.8+ caused by an unused wp-block-editor script dependency on the customizer controls bundle.
+* Fix: Padding bleed on list and quote blocks in the Separate Container layout in the Block Editor.
+* Fix: Duplicate H1 tags when using the `astra_show_site_title_h1_tag` filter with Header Builder active.
+
 2026-04-27 - version 4.13.1
 * Fix: Mini-cart not refreshing after add-to-cart on WooCommerce "Hand-picked Products" and "Products by Category" blocks.
 * Fix: Customizer strings reverting to admin language on the frontend when using different languages for Admin and Frontend with WPML.

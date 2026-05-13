@@ -3040,7 +3040,7 @@ li.customize-control.ast-top-section-spacing {
 	background: var( --ast-customizer-color-9 );
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and ( max-width: 1600px ) {
 	.ast-typo-presets .ast-typo-preset-item {
 		height: 75px;
 	}
@@ -3186,6 +3186,13 @@ div .ast-field-settings-modal .customize-control-ast-font-extras {
 	color: var( --ast-customizer-primary-color );
 }
 
+.ast-font-extras-wrapper .ast-units-wrapper,
+.ast-font-spacing-wrapper .ast-units-wrapper {
+	position: relative;
+	top: auto;
+	right: auto;
+}
+
 .ast-font-styling-second {
 	display: flex;
 	justify-content: space-between;
@@ -3250,8 +3257,9 @@ div .ast-field-settings-modal .customize-control-ast-font-extras {
 }
 
 .customize-control-ast-radio-image .modern-layout label:hover svg,
-.components-button-group.ahfb-radio-container-control label:hover svg, .input-wrapper.ast-alignment-wrapper .ast-alignment-inner-wrap:hover {
-	background-color: var( --ast-customizer-color-13);
+.components-button-group.ahfb-radio-container-control label:hover svg,
+.input-wrapper.ast-alignment-wrapper .ast-alignment-inner-wrap:hover {
+	background-color: var( --ast-customizer-color-13 );
 }
 
 .ast-font-transform-container,
@@ -3260,22 +3268,22 @@ div .ast-field-settings-modal .customize-control-ast-font-extras {
 	flex: 1;
 }
 
-@media (min-width: 1601px) {
-   .ast-font-styling-second .ast-font-decoration-container > .ast-control-tooltip {
-        margin-left: 106px;
-    }
+@media ( min-width: 1601px ) {
+	.ast-font-styling-second .ast-font-decoration-container > .ast-control-tooltip {
+		margin-left: 106px;
+	}
 }
 
-@media (min-width: 1600px) and (max-width: 1700px) {
-    .ast-font-decoration-container > .ast-control-tooltip {
-        margin-left: 86px;
-    }
+@media ( min-width: 1600px ) and ( max-width: 1700px ) {
+	.ast-font-decoration-container > .ast-control-tooltip {
+		margin-left: 86px;
+	}
 }
 
-@media (min-width: 1700px) and (max-width: 1800px) {
-    .ast-font-decoration-container > .ast-control-tooltip {
-        margin-left: 96px;
-    }
+@media ( min-width: 1700px ) and ( max-width: 1800px ) {
+	.ast-font-decoration-container > .ast-control-tooltip {
+		margin-left: 96px;
+	}
 }
 
 .ast-font-decoration-container > .ast-control-tooltip {
@@ -3314,11 +3322,11 @@ div .ast-field-settings-modal .customize-control-ast-font-extras {
 }
 
 .ast-font-decoration-container .ast-tooltip {
-    margin-left: -50px !important;
+	margin-left: -50px !important;
 }
 
-.ast-font-decoration-container .ast-tooltip[data-title]::before{
-	bottom: calc(100% + 9px);
+.ast-font-decoration-container .ast-tooltip[data-title]::before {
+	bottom: calc( 100% + 9px );
 }
 
 .ast-customizer-font-varient-wrap {
@@ -3920,7 +3928,7 @@ li#customize-control-astra-settings-header-preset-style .customizer-text {
 }
 
 .ast-multiselector-inner-wrap:hover {
-    background: var(--ast-customizer-color-11);
+	background: var( --ast-customizer-color-11 );
 }
 
 .customize-control-ast-multi-selector .ast-multiselector-inner-wrap span[label] {
@@ -3961,7 +3969,7 @@ li#customize-control-astra-settings-header-preset-style .customizer-text {
 	margin: 5px;
 	align-items: center;
 	padding: 5px;
-	height: 30px;
+	min-height: 30px;
 	border-radius: 0;
 }
 

@@ -440,7 +440,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 		 * @return void
 		 */
 		public function print_footer_scripts() {
-			$output  = '<script type="text/javascript">';
+			$output = '<script type="text/javascript">';
 
 			$output .= '
 	        	wp.customize.bind(\'ready\', function() {
@@ -983,6 +983,9 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				case 'ast-toggle-control':
 				case 'ast-section-toggle':
 					$config ['sanitize_callback'] = array( 'Astra_Customizer_Sanitizes', 'sanitize_toggle_control' );
+					break;
+				case 'ast-font-extras':
+					$config ['sanitize_callback'] = array( 'Astra_Customizer_Sanitizes', 'sanitize_font_extras' );
 					break;
 				default:
 					break;

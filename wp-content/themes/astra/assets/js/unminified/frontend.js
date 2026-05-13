@@ -187,10 +187,12 @@ astScrollToTopHandler = function ( masthead, astScrollTop ) {
 	document.addEventListener('click', function (e) {
 		const button = e.target.closest('.menu-toggle');
 		if (button && mobileHeaderType === 'dropdown') {
-			button.classList.toggle('toggled');
+			if (typeof astraAddon === 'undefined') {
+				button.classList.toggle('toggled');
+				syncToggledClass();
+			}
 			const isToggled = button.classList.contains('toggled');
 			button.setAttribute('aria-expanded', isToggled ? 'true' : 'false');
-			syncToggledClass();
 		}
 	});
 	

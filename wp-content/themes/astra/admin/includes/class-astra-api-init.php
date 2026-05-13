@@ -283,6 +283,7 @@ class Astra_API_Init extends WP_REST_Controller {
 		$astra_admin_updated_settings         = get_option( self::$option_name, array() );
 		$astra_admin_updated_settings[ $key ] = $value;
 		update_option( self::$option_name, $astra_admin_updated_settings );
+		self::$astra_admin_settings[ $key ] = $value;
 	}
 }
 
